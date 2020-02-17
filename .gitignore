@@ -21,6 +21,10 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
+Sourcery/Output/
+*generated.*
+APIKeys.generated.swift
+APIKeys/*
 
 ## Obj-C/Swift specific
 *.hmap
