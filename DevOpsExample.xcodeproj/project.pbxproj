@@ -382,7 +382,6 @@
 				266CDDB0D81C75CEE88D7364 /* Pods-DevOpsExampleTests.debug.xcconfig */,
 				876F6B3399B2D13FA2A91FDF /* Pods-DevOpsExampleTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -397,6 +396,7 @@
 				92BC2EC423FB0ACD00AF1AD6 /* Sources */,
 				92BC2EC523FB0ACD00AF1AD6 /* Frameworks */,
 				92BC2EC623FB0ACD00AF1AD6 /* Resources */,
+				92BC2FEE23FB337200AF1AD6 /* Import API Keys */,
 			);
 			buildRules = (
 			);
@@ -624,6 +624,25 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		92BC2FEE23FB337200AF1AD6 /* Import API Keys */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Import API Keys";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/Sourcery/Output/APIKeys.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./importapikeys.sh\n";
 		};
 		9CEDF6B405F333EFB80BE079 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
