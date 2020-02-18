@@ -16,4 +16,4 @@ jobs:
       ExampleC:
         app_name: "ExampleC"
   steps:
-    - script: bundle exec fastlane ios_appstore_no_upload app_name:$(app_name) build_number:2
+    - script: fastlane ios_appstore_no_upload app_name:$(app_name) build_number:2
