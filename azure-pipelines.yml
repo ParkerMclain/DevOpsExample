@@ -4,17 +4,17 @@ trigger:
 jobs: 
 
 - job: iOS_Release
-pool:
-  vmImage: 'macOS 10.13'
+  pool:
+    vmImage: 'macOS 10.13'
   condition: succeeded()
-  stategy:
-  matrix:
-    ExampleA:
-      app_name: "ExampleA"
-    ExampleB:
-      app_name: "ExampleB"
-    ExampleC:
-      app_name: "ExampleC"
+  strategy:
+    matrix:
+      ExampleA:
+        app_name: "ExampleA"
+      ExampleB:
+        app_name: "ExampleB"
+      ExampleC:
+        app_name: "ExampleC"
   steps:
     - script: |
-    bundle exec fastlane ios_appstore_no_upload app_name:$(app_name) build_number:2
+      bundle exec fastlane ios_appstore_no_upload app_name:$(app_name) build_number:2
