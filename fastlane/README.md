@@ -53,6 +53,11 @@ Example cmdline: bundle exec fastlane ios_appstore_no_upload app_name:ExampleA b
 fastlane assert_build_number
 ```
 
+### build
+```
+fastlane build
+```
+Build the QA/Adhoc/Release configuration ipa.
 
 ----
 

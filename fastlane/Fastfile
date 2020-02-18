@@ -36,7 +36,7 @@ before_all do |lane, options|
   options[:profiles_glob] = File.join("#{$root_dir}/**/profiles/**", "*.mobileprovision")
 
   if lane == :ios_appstore || lane == :ios_appstore_no_upload || lane == :ios_testflight
-    options[:is_appstore] = false
+    options[:is_appstore] = true
   else
     options[:is_appstore] = false
   end
@@ -152,7 +152,7 @@ lane :set_options do |options|
     if options[:is_appstore]
       options[:provisioning_profiles] = {"ParkerMclain.DevOpsExampleA": "ExampleA - Prod"}
     else
-      options[:provisioning_profiles] = {"ParkerMclain.DevOpsExampleA": "ExampleA - Debug"}
+      options[:provisioning_profiles] = {"ParkerMclain.DevOpsExampleA.qa": "ExampleA - QA"}
     end
   when "ExampleB"
     puts "Setting up ExampleB"
@@ -165,7 +165,7 @@ lane :set_options do |options|
     if options[:is_appstore]
       options[:provisioning_profiles] = {"ParkerMclain.DevOpsExampleB": "ExampleB - Prod"}
     else
-      options[:provisioning_profiles] = {"ParkerMclain.DevOpsExampleB": "ExampleB - Debug"}
+      options[:provisioning_profiles] = {"ParkerMclain.DevOpsExampleB.qa": "ExampleB - QA"}
     end
   when "ExampleC"
     puts "Setting up ExampleC"
@@ -178,7 +178,7 @@ lane :set_options do |options|
     if options[:is_appstore]
       options[:provisioning_profiles] = {"ParkerMclain.DevOpsExampleC": "ExampleC - Prod"}
     else
-      options[:provisioning_profiles] = {"ParkerMclain.DevOpsExampleC": "ExampleC - Debug"}
+      options[:provisioning_profiles] = {"ParkerMclain.DevOpsExampleC.qa": "ExampleC - QA"}
     end
   else
     UI.user_error!("Invalid Fox App Options!")
@@ -250,4 +250,36 @@ private_lane :build_dependencies_if_necessary do |options|
   else
     UI.important "No Podfile found!"
   end
+end
+
+desc "Build the QA/Adhoc/Release configuration ipa."
+lane :build do |options|
+  scheme = options[:scheme]
+  ipa_path = baseipa_path(scheme)
+  build_dependencies_if_necessary(platform: "iOS")
+  unless File.file?(ipa_path)
+    gym(
+      workspace: $workspace,
+      clean: true,
+      scheme: scheme,
+      configuration: "Release",
+      output_directory: File.dirname(ipa_path),
+      archive_path: File.dirname(ipa_path),
+      buildlog_path: "#{$root_dir}/artifacts/logs/gym",
+      skip_profile_detection: options[:is_fts],
+      xcargs: "-UseModernBuildSystem=YES",
+      export_options: {
+        method: "ad-hoc",
+        iCloudContainerEnvironment: "Production",
+        teamID: options[:buildTeamID],
+        provisioningProfiles: options[:provisioning_profiles]
+      }
+    )
+  else
+    UI.important "Not Rebuilding IPA as it Already Exists at #{ipa_path}"
+  end
+end
+
+def baseipa_path(scheme)
+  "#{$root_dir}/artifacts/builds/base/#{scheme}.ipa"
 end
