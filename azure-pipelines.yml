@@ -1,0 +1,18 @@
+trigger:
+  - azure-pipeline-yaml
+
+jobs: 
+
+- job: iOS_Release
+  condition: succeeded()
+  stategy:
+  matrix:
+    ExampleA:
+      app_name: "ExampleA"
+    ExampleB:
+      app_name: "ExampleB"
+    ExampleC:
+      app_name: "ExampleC"
+  steps:
+    - script: |
+    bundle exec fastlane ios_appstore_no_upload app_name:$(app_name) build_number:2
