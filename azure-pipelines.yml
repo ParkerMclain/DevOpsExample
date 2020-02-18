@@ -16,4 +16,6 @@ jobs:
       ExampleC:
         app_name: "ExampleC"
   steps:
+    - script: gem install bundler
+    - script: bundle install
     - script: fastlane ios_appstore_no_upload app_name:$(app_name) build_number:2
