@@ -1,29 +1,36 @@
 BUILD_CONFIGURATIONS:
+  AppStore: :release
   Debug: :debug
   Release: :release
 CACHE_KEYS:
   Pods-DevOpsExample:
     BUILD_SETTINGS_CHECKSUM:
+      AppStore: f76f7954c07e301c0ff722ae5c494b92
       Debug: f76f7954c07e301c0ff722ae5c494b92
       Release: f76f7954c07e301c0ff722ae5c494b92
   Pods-DevOpsExample-DevOpsExampleUITests:
     BUILD_SETTINGS_CHECKSUM:
+      AppStore: f76f7954c07e301c0ff722ae5c494b92
       Debug: f76f7954c07e301c0ff722ae5c494b92
       Release: f76f7954c07e301c0ff722ae5c494b92
   Pods-DevOpsExampleA:
     BUILD_SETTINGS_CHECKSUM:
+      AppStore: f76f7954c07e301c0ff722ae5c494b92
       Debug: f76f7954c07e301c0ff722ae5c494b92
       Release: f76f7954c07e301c0ff722ae5c494b92
   Pods-DevOpsExampleB:
     BUILD_SETTINGS_CHECKSUM:
+      AppStore: f76f7954c07e301c0ff722ae5c494b92
       Debug: f76f7954c07e301c0ff722ae5c494b92
       Release: f76f7954c07e301c0ff722ae5c494b92
   Pods-DevOpsExampleC:
     BUILD_SETTINGS_CHECKSUM:
+      AppStore: f76f7954c07e301c0ff722ae5c494b92
       Debug: f76f7954c07e301c0ff722ae5c494b92
       Release: f76f7954c07e301c0ff722ae5c494b92
   Pods-DevOpsExampleTests:
     BUILD_SETTINGS_CHECKSUM:
+      AppStore: 8b5b38bcaeebfbc5674209bf0c4db5a1
       Debug: 8b5b38bcaeebfbc5674209bf0c4db5a1
       Release: 8b5b38bcaeebfbc5674209bf0c4db5a1
   Sourcery:

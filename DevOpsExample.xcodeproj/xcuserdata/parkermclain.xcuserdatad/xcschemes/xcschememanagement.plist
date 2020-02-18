@@ -12,7 +12,7 @@
 		<key>DevOpsExample.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>9</integer>
 		</dict>
 		<key>DevOpsExampleA copy copy.xcscheme_^#shared#^_</key>
 		<dict>
@@ -32,7 +32,7 @@
 		<key>DevOpsExampleB.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>8</integer>
 		</dict>
 		<key>DevOpsExampleC.xcscheme_^#shared#^_</key>
 		<dict>
@@ -48,6 +48,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>92BC2F7723FB17EE00AF1AD6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>92BC2FB023FB262600AF1AD6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

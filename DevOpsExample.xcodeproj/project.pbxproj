@@ -64,14 +64,18 @@
 		139864537C99A28C5522CAEA /* Pods-DevOpsExampleA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevOpsExampleA.debug.xcconfig"; path = "Target Support Files/Pods-DevOpsExampleA/Pods-DevOpsExampleA.debug.xcconfig"; sourceTree = "<group>"; };
 		1451DD4DA6BED3991AB397EF /* Pods_DevOpsExampleA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevOpsExampleA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		266CDDB0D81C75CEE88D7364 /* Pods-DevOpsExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevOpsExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-DevOpsExampleTests/Pods-DevOpsExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2808836399572FCA27717346 /* Pods-DevOpsExampleB.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevOpsExampleB.appstore.xcconfig"; path = "Target Support Files/Pods-DevOpsExampleB/Pods-DevOpsExampleB.appstore.xcconfig"; sourceTree = "<group>"; };
 		491830B631B0CD0141539DC2 /* Pods_DevOpsExampleC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevOpsExampleC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58172C470B9BF8CB939A88D7 /* Pods-DevOpsExampleB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevOpsExampleB.release.xcconfig"; path = "Target Support Files/Pods-DevOpsExampleB/Pods-DevOpsExampleB.release.xcconfig"; sourceTree = "<group>"; };
 		6D2C2BD6EA2D5C5E50690B0D /* Pods-DevOpsExampleB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevOpsExampleB.debug.xcconfig"; path = "Target Support Files/Pods-DevOpsExampleB/Pods-DevOpsExampleB.debug.xcconfig"; sourceTree = "<group>"; };
 		726859205DDCC565A6515464 /* Pods_DevOpsExampleB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevOpsExampleB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72B7A527E31B2B01BE531EFC /* Pods-DevOpsExample-DevOpsExampleUITests.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevOpsExample-DevOpsExampleUITests.appstore.xcconfig"; path = "Target Support Files/Pods-DevOpsExample-DevOpsExampleUITests/Pods-DevOpsExample-DevOpsExampleUITests.appstore.xcconfig"; sourceTree = "<group>"; };
 		73A35ED9BF7C3D79D95D4E31 /* Pods_DevOpsExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevOpsExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79EDB5D603516712B37E8A7D /* Pods-DevOpsExample-DevOpsExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevOpsExample-DevOpsExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-DevOpsExample-DevOpsExampleUITests/Pods-DevOpsExample-DevOpsExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		80D022030A3E7A5DFE2F96EC /* Pods-DevOpsExampleTests.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevOpsExampleTests.appstore.xcconfig"; path = "Target Support Files/Pods-DevOpsExampleTests/Pods-DevOpsExampleTests.appstore.xcconfig"; sourceTree = "<group>"; };
 		836093271CFBA3EFD179629A /* Pods-DevOpsExampleC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevOpsExampleC.release.xcconfig"; path = "Target Support Files/Pods-DevOpsExampleC/Pods-DevOpsExampleC.release.xcconfig"; sourceTree = "<group>"; };
 		876F6B3399B2D13FA2A91FDF /* Pods-DevOpsExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevOpsExampleTests.release.xcconfig"; path = "Target Support Files/Pods-DevOpsExampleTests/Pods-DevOpsExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		88717835F91CAA45B4043AEA /* Pods-DevOpsExample.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevOpsExample.appstore.xcconfig"; path = "Target Support Files/Pods-DevOpsExample/Pods-DevOpsExample.appstore.xcconfig"; sourceTree = "<group>"; };
 		88988DBC74928655ACC39A45 /* Pods-DevOpsExampleC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevOpsExampleC.debug.xcconfig"; path = "Target Support Files/Pods-DevOpsExampleC/Pods-DevOpsExampleC.debug.xcconfig"; sourceTree = "<group>"; };
 		92BC2EC823FB0ACD00AF1AD6 /* DevOpsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevOpsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BC2ECB23FB0ACD00AF1AD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,8 +110,10 @@
 		92BC2FE823FB278A00AF1AD6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93F072284F66263A301E68AE /* Pods-DevOpsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevOpsExample.debug.xcconfig"; path = "Target Support Files/Pods-DevOpsExample/Pods-DevOpsExample.debug.xcconfig"; sourceTree = "<group>"; };
 		AB217FC36CB3DBD67C7B7BB1 /* Pods_DevOpsExample_DevOpsExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevOpsExample_DevOpsExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6762AC6FA62268C3DDBE0A6 /* Pods-DevOpsExampleA.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevOpsExampleA.appstore.xcconfig"; path = "Target Support Files/Pods-DevOpsExampleA/Pods-DevOpsExampleA.appstore.xcconfig"; sourceTree = "<group>"; };
 		E35B6F4826F241B2887C29C9 /* Pods-DevOpsExample-DevOpsExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevOpsExample-DevOpsExampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-DevOpsExample-DevOpsExampleUITests/Pods-DevOpsExample-DevOpsExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3EC517E1D37231AE580C4BD /* Pods_DevOpsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevOpsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCD932856E8A2894EACA590B /* Pods-DevOpsExampleC.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevOpsExampleC.appstore.xcconfig"; path = "Target Support Files/Pods-DevOpsExampleC/Pods-DevOpsExampleC.appstore.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,9 +184,9 @@
 		92BC2EBF23FB0ACD00AF1AD6 = {
 			isa = PBXGroup;
 			children = (
-				92BC2EFB23FB146D00AF1AD6 /* ExampleA */,
-				92BC2EFE23FB148000AF1AD6 /* ExampleB */,
-				92BC2EFD23FB147B00AF1AD6 /* ExampleC */,
+				92BC2EFB23FB146D00AF1AD6 /* DevOpsExampleA */,
+				92BC2EFE23FB148000AF1AD6 /* DevOpsExampleB */,
+				92BC2EFD23FB147B00AF1AD6 /* DevOpsExampleC */,
 				92BC2ECA23FB0ACD00AF1AD6 /* DevOpsExample */,
 				92BC2EE123FB0ACE00AF1AD6 /* DevOpsExampleTests */,
 				92BC2EEC23FB0ACE00AF1AD6 /* DevOpsExampleUITests */,
@@ -235,7 +241,7 @@
 			path = DevOpsExampleUITests;
 			sourceTree = "<group>";
 		};
-		92BC2EFB23FB146D00AF1AD6 /* ExampleA */ = {
+		92BC2EFB23FB146D00AF1AD6 /* DevOpsExampleA */ = {
 			isa = PBXGroup;
 			children = (
 				92BC2FAD23FB212C00AF1AD6 /* Info.plist */,
@@ -247,10 +253,10 @@
 				92BC2F6B23FB174B00AF1AD6 /* ExampleA Tests */,
 				92BC2F6C23FB175200AF1AD6 /* ExampleA UITests */,
 			);
-			path = ExampleA;
+			path = DevOpsExampleA;
 			sourceTree = "<group>";
 		};
-		92BC2EFD23FB147B00AF1AD6 /* ExampleC */ = {
+		92BC2EFD23FB147B00AF1AD6 /* DevOpsExampleC */ = {
 			isa = PBXGroup;
 			children = (
 				92BC2FE823FB278A00AF1AD6 /* Info.plist */,
@@ -262,10 +268,10 @@
 				92BC2FD323FB268A00AF1AD6 /* ExampleC Tests */,
 				92BC2FD223FB268100AF1AD6 /* ExampleC UITests */,
 			);
-			path = ExampleC;
+			path = DevOpsExampleC;
 			sourceTree = "<group>";
 		};
-		92BC2EFE23FB148000AF1AD6 /* ExampleB */ = {
+		92BC2EFE23FB148000AF1AD6 /* DevOpsExampleB */ = {
 			isa = PBXGroup;
 			children = (
 				92BC2FE023FB273400AF1AD6 /* Info.plist */,
@@ -277,7 +283,7 @@
 				92BC2FCF23FB265F00AF1AD6 /* ExampleB Tests */,
 				92BC2FCE23FB264E00AF1AD6 /* ExampleB UITests */,
 			);
-			path = ExampleB;
+			path = DevOpsExampleB;
 			sourceTree = "<group>";
 		};
 		92BC2F6823FB170F00AF1AD6 /* App Configs */ = {
@@ -381,6 +387,12 @@
 				836093271CFBA3EFD179629A /* Pods-DevOpsExampleC.release.xcconfig */,
 				266CDDB0D81C75CEE88D7364 /* Pods-DevOpsExampleTests.debug.xcconfig */,
 				876F6B3399B2D13FA2A91FDF /* Pods-DevOpsExampleTests.release.xcconfig */,
+				88717835F91CAA45B4043AEA /* Pods-DevOpsExample.appstore.xcconfig */,
+				72B7A527E31B2B01BE531EFC /* Pods-DevOpsExample-DevOpsExampleUITests.appstore.xcconfig */,
+				D6762AC6FA62268C3DDBE0A6 /* Pods-DevOpsExampleA.appstore.xcconfig */,
+				2808836399572FCA27717346 /* Pods-DevOpsExampleB.appstore.xcconfig */,
+				FCD932856E8A2894EACA590B /* Pods-DevOpsExampleC.appstore.xcconfig */,
+				80D022030A3E7A5DFE2F96EC /* Pods-DevOpsExampleTests.appstore.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -453,6 +465,7 @@
 				92BC2F7823FB17EE00AF1AD6 /* Sources */,
 				92BC2F7C23FB17EE00AF1AD6 /* Frameworks */,
 				92BC2F7D23FB17EE00AF1AD6 /* Resources */,
+				92BC2FF123FC3CA300AF1AD6 /* Import API Keys */,
 			);
 			buildRules = (
 			);
@@ -471,6 +484,7 @@
 				92BC2FB123FB262600AF1AD6 /* Sources */,
 				92BC2FB523FB262600AF1AD6 /* Frameworks */,
 				92BC2FB623FB262600AF1AD6 /* Resources */,
+				92BC2FF223FC3CB700AF1AD6 /* Import API Keys */,
 			);
 			buildRules = (
 			);
@@ -489,6 +503,7 @@
 				92BC2FC023FB262800AF1AD6 /* Sources */,
 				92BC2FC423FB262800AF1AD6 /* Frameworks */,
 				92BC2FC523FB262800AF1AD6 /* Resources */,
+				92BC2FF323FC3CC000AF1AD6 /* Import API Keys */,
 			);
 			buildRules = (
 			);
@@ -626,6 +641,63 @@
 			showEnvVarsInLog = 0;
 		};
 		92BC2FEE23FB337200AF1AD6 /* Import API Keys */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Import API Keys";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/Sourcery/Output/APIKeys.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./importapikeys.sh\n";
+		};
+		92BC2FF123FC3CA300AF1AD6 /* Import API Keys */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Import API Keys";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/Sourcery/Output/APIKeys.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./importapikeys.sh\n";
+		};
+		92BC2FF223FC3CB700AF1AD6 /* Import API Keys */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Import API Keys";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/Sourcery/Output/APIKeys.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./importapikeys.sh\n";
+		};
+		92BC2FF323FC3CC000AF1AD6 /* Import API Keys */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1093,15 +1165,17 @@
 			baseConfigurationReference = 139864537C99A28C5522CAEA /* Pods-DevOpsExampleA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ExampleA-AppIcon";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5HNM8PG7H4;
-				INFOPLIST_FILE = ExampleA/Info.plist;
+				INFOPLIST_FILE = DevOpsExampleA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ParkerMclain.DevOpsExampleA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "ExampleA - Debug";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1112,15 +1186,17 @@
 			baseConfigurationReference = 09875E3E6C76C1AE7875CF20 /* Pods-DevOpsExampleA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ExampleA-AppIcon";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5HNM8PG7H4;
-				INFOPLIST_FILE = ExampleA/Info.plist;
+				INFOPLIST_FILE = DevOpsExampleA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ParkerMclain.DevOpsExampleA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "ExampleA - Prod";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1131,15 +1207,17 @@
 			baseConfigurationReference = 6D2C2BD6EA2D5C5E50690B0D /* Pods-DevOpsExampleB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ExampleB-AppIcon";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5HNM8PG7H4;
-				INFOPLIST_FILE = ExampleB/Info.plist;
+				INFOPLIST_FILE = DevOpsExampleB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ParkerMclain.DevOpsExampleB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "ExampleB - Debug";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1150,15 +1228,17 @@
 			baseConfigurationReference = 58172C470B9BF8CB939A88D7 /* Pods-DevOpsExampleB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ExampleB-AppIcon";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5HNM8PG7H4;
-				INFOPLIST_FILE = ExampleB/Info.plist;
+				INFOPLIST_FILE = DevOpsExampleB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ParkerMclain.DevOpsExampleB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "ExampleB - Prod";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1169,15 +1249,17 @@
 			baseConfigurationReference = 88988DBC74928655ACC39A45 /* Pods-DevOpsExampleC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ExampleC-AppIcon";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5HNM8PG7H4;
-				INFOPLIST_FILE = ExampleC/Info.plist;
+				INFOPLIST_FILE = DevOpsExampleC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ParkerMclain.DevOpsExampleC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "ExampleC - Debug";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1188,19 +1270,201 @@
 			baseConfigurationReference = 836093271CFBA3EFD179629A /* Pods-DevOpsExampleC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ExampleC-AppIcon";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5HNM8PG7H4;
-				INFOPLIST_FILE = ExampleC/Info.plist;
+				INFOPLIST_FILE = DevOpsExampleC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ParkerMclain.DevOpsExampleC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "ExampleC - Prod";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
+		};
+		92BC2FF423FC44BC00AF1AD6 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AppStore;
+		};
+		92BC2FF523FC44BC00AF1AD6 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88717835F91CAA45B4043AEA /* Pods-DevOpsExample.appstore.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5HNM8PG7H4;
+				INFOPLIST_FILE = DevOpsExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ParkerMclain.DevOpsExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = AppStore;
+		};
+		92BC2FF623FC44BC00AF1AD6 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80D022030A3E7A5DFE2F96EC /* Pods-DevOpsExampleTests.appstore.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5HNM8PG7H4;
+				INFOPLIST_FILE = DevOpsExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ParkerMclain.DevOpsExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DevOpsExample.app/DevOpsExample";
+			};
+			name = AppStore;
+		};
+		92BC2FF723FC44BC00AF1AD6 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72B7A527E31B2B01BE531EFC /* Pods-DevOpsExample-DevOpsExampleUITests.appstore.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5HNM8PG7H4;
+				INFOPLIST_FILE = DevOpsExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ParkerMclain.DevOpsExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DevOpsExample;
+			};
+			name = AppStore;
+		};
+		92BC2FF823FC44BC00AF1AD6 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6762AC6FA62268C3DDBE0A6 /* Pods-DevOpsExampleA.appstore.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "ExampleA-AppIcon";
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5HNM8PG7H4;
+				INFOPLIST_FILE = DevOpsExampleA/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ParkerMclain.DevOpsExampleA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "ExampleA - Prod";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = AppStore;
+		};
+		92BC2FF923FC44BC00AF1AD6 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2808836399572FCA27717346 /* Pods-DevOpsExampleB.appstore.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "ExampleB-AppIcon";
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5HNM8PG7H4;
+				INFOPLIST_FILE = DevOpsExampleB/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ParkerMclain.DevOpsExampleB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "ExampleB - Prod";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = AppStore;
+		};
+		92BC2FFA23FC44BC00AF1AD6 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCD932856E8A2894EACA590B /* Pods-DevOpsExampleC.appstore.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "ExampleC-AppIcon";
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5HNM8PG7H4;
+				INFOPLIST_FILE = DevOpsExampleC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ParkerMclain.DevOpsExampleC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "ExampleC - Prod";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = AppStore;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1210,6 +1474,7 @@
 			buildConfigurations = (
 				92BC2EF023FB0ACF00AF1AD6 /* Debug */,
 				92BC2EF123FB0ACF00AF1AD6 /* Release */,
+				92BC2FF423FC44BC00AF1AD6 /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1219,6 +1484,7 @@
 			buildConfigurations = (
 				92BC2EF323FB0ACF00AF1AD6 /* Debug */,
 				92BC2EF423FB0ACF00AF1AD6 /* Release */,
+				92BC2FF523FC44BC00AF1AD6 /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1228,6 +1494,7 @@
 			buildConfigurations = (
 				92BC2EF623FB0ACF00AF1AD6 /* Debug */,
 				92BC2EF723FB0ACF00AF1AD6 /* Release */,
+				92BC2FF623FC44BC00AF1AD6 /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1237,6 +1504,7 @@
 			buildConfigurations = (
 				92BC2EF923FB0ACF00AF1AD6 /* Debug */,
 				92BC2EFA23FB0ACF00AF1AD6 /* Release */,
+				92BC2FF723FC44BC00AF1AD6 /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1246,6 +1514,7 @@
 			buildConfigurations = (
 				92BC2F8723FB17EE00AF1AD6 /* Debug */,
 				92BC2F8823FB17EE00AF1AD6 /* Release */,
+				92BC2FF823FC44BC00AF1AD6 /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1255,6 +1524,7 @@
 			buildConfigurations = (
 				92BC2FBB23FB262600AF1AD6 /* Debug */,
 				92BC2FBC23FB262600AF1AD6 /* Release */,
+				92BC2FF923FC44BC00AF1AD6 /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1264,6 +1534,7 @@
 			buildConfigurations = (
 				92BC2FCA23FB262800AF1AD6 /* Debug */,
 				92BC2FCB23FB262800AF1AD6 /* Release */,
+				92BC2FFA23FC44BC00AF1AD6 /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

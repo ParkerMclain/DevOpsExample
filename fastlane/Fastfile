@@ -1,0 +1,253 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+fastlane_require 'yaml'
+fastlane_require 'erb'
+
+$asc_username = "parkermclain94@gmail.com"
+
+$keychain_name = "ExampleDevOpsKeychain"
+$system_provisioning_path = File.expand_path("~/Library/MobileDevice/Provisioning Profiles")
+$root_dir = File.expand_path(File.join(File.dirname(__FILE__), ".."))
+$project = "DevOpsExample"
+
+before_all do |lane, options|
+  clear_derived_data(derived_data_path: "#{$root_dir}/build/TestDD-iPhone")
+
+  if ENV["DIST_P12_PASSWORD"]
+    options[:cert_dir] = "#{$root_dir}/signing"
+    options[:cert_password] = ENV["DIST_P12_PASSWORD"]
+    install_signing(options)
+  end
+  options[:profiles_glob] = File.join("#{$root_dir}/**/profiles/**", "*.mobileprovision")
+
+  if lane == :ios_appstore || lane == :ios_appstore_no_upload || lane == :ios_testflight
+    options[:is_appstore] = false
+  else
+    options[:is_appstore] = false
+  end
+
+  # Set the correct options based on the provided app ID
+  set_options(options)
+  install_profiles(options)
+end
+
+after_all do |lane, options|
+  if options[:isAppstoreProcess]
+    next
+  end
+  uninstall_signing()
+end
+
+error do |lane, exception, options|
+  uninstall_signing()
+end
+
+desc "Install build certificates."
+lane :install_signing do |options|
+  # Clean up old keychain if it exists
+  begin
+    uninstall_signing
+  rescue
+    UI.important "keychain doesn't exist!"
+  end
+
+  # Setup build keychain & add certificates
+  UI.success "Creating keychain..."
+  UI.success $keychain_name
+  create_keychain(
+    name: $keychain_name,
+    password: $keychain_name,
+    default_keychain: false,
+    unlock: true,
+    timeout: 3600,
+    lock_when_sleeps: false
+  )
+
+  UI.success "Importing Distribution"
+  cert_dir = options[:cert_dir]
+  certs = Dir.entries(cert_dir).select { |s| s.end_with?(".p12") }
+  certs.each do |cert|
+    import_certificate(
+      keychain_name: $keychain_name,
+      keychain_password: $keychain_name,
+      certificate_path: "#{cert_dir}/#{cert}",
+      certificate_password: options[:cert_password]
+    )
+  end
+end
+
+desc "Remove build certificates. Always do this, even if the build fails."
+private_lane :uninstall_signing do |options|
+  # Set the login.keychain back to default
+  sh(%{
+    security default-keychain -s login.keychain || :
+    security list-keychains -d user -s ~/Library/Keychains/login.keychain
+  })
+
+  delete_keychain(name: $keychain_name) rescue nil
+end
+
+lane :install_profiles do |options|
+  sh(%|mkdir -p "#{$system_provisioning_path}"|)
+
+  profiles_glob = options[:profiles_glob]
+  profiles = Dir.glob(profiles_glob)
+  profiles.each do |profile|
+    sh(%|rsync -av "#{profile}" "#{$system_provisioning_path}"|)
+  end
+end
+
+lane :uninstall_profiles do |options|
+  sh(%|mkdir -p "#{$system_provisioning_path}"|)
+
+  profiles_glob = options[:profiles_glob]
+  profiles = Dir.glob(profiles_glob)
+  profiles.each do |profile|
+    $rmfilename = "#{$system_provisioning_path}/#{File.basename(profile)}"
+    sh(%|rm "#{$rmfilename}"|) rescue "Error: failed to delete #{$rmfilename}"
+  end
+end
+
+lane :set_options do |options|
+  puts "Selecting Fox App and setting options"
+
+  # Get the app name from the provided options
+  appName = options[:app_name]
+
+  options[:buildTeamID] = "5HNM8PG7H4"
+  options[:tf_user] = $asc_username
+
+  # Set app-specific properties in the options based on the app
+  # Properties we need to set are:
+  #  - Target
+  #  - Scheme
+  #  - Provisioning Profile
+  #  - UI Test Scheme
+  #  - Unit Test bundle
+
+  case appName
+  when "ExampleA"
+    puts "Setting up ExampleA"
+    options[:target] = "DevOpsExampleA"
+    options[:scheme] = "DevOpsExampleA"
+    options[:ui_test_scheme] = "DevOpsExampleAUITests"
+    options[:unit_test_bundle] = "DevOpsExampleATests"
+
+    # Check if this lane is for the AppStore
+    if options[:is_appstore]
+      options[:provisioning_profiles] = {"ParkerMclain.DevOpsExampleA": "ExampleA - Prod"}
+    else
+      options[:provisioning_profiles] = {"ParkerMclain.DevOpsExampleA": "ExampleA - Debug"}
+    end
+  when "ExampleB"
+    puts "Setting up ExampleB"
+    options[:target] = "DevOpsExampleB"
+    options[:scheme] = "DevOpsExampleB"
+    options[:ui_test_scheme] = "DevOpsExampleBUITests"
+    options[:unit_test_bundle] = "DevOpsExampleBTests"
+
+    # Check if this lane is for the AppStore
+    if options[:is_appstore]
+      options[:provisioning_profiles] = {"ParkerMclain.DevOpsExampleB": "ExampleB - Prod"}
+    else
+      options[:provisioning_profiles] = {"ParkerMclain.DevOpsExampleB": "ExampleB - Debug"}
+    end
+  when "ExampleC"
+    puts "Setting up ExampleC"
+    options[:target] = "DevOpsExampleC"
+    options[:scheme] = "DevOpsExampleC"
+    options[:ui_test_scheme] = "DevOpsExampleCUITests"
+    options[:unit_test_bundle] = "DevOpsExampleCTests"
+
+    # Check if this lane is for the AppStore
+    if options[:is_appstore]
+      options[:provisioning_profiles] = {"ParkerMclain.DevOpsExampleC": "ExampleC - Prod"}
+    else
+      options[:provisioning_profiles] = {"ParkerMclain.DevOpsExampleC": "ExampleC - Debug"}
+    end
+  else
+    UI.user_error!("Invalid Fox App Options!")
+  end
+end
+
+desc "Build an iOS App Store release"
+desc "####Options"
+desc " * **`app_name`**: app to build."
+desc " * **`build_number`**: increment_build_number"
+desc "Example cmdline: bundle exec fastlane ios_appstore_no_upload app_name:ExampleA build_number:4321"
+lane :ios_appstore_no_upload do |options|
+  output_dir = "./artifacts/builds/appstore"
+  target = options[:target]
+  scheme = options[:scheme]
+  configuration = "AppStore"
+
+  assert_build_number(
+    build_number: options[:build_number],
+    target: target,
+    configuration: configuration,
+  )
+
+  increment_build_number(
+    build_number: options[:build_number],
+    xcodeproj: $project
+  )
+
+  build_dependencies_if_necessary(platform: "iOS")
+  gym(
+     workspace: $workspace,
+     clean: true,
+     scheme: scheme,
+     configuration: configuration,
+     output_directory: output_dir,
+     archive_path: output_dir,
+     skip_profile_detection: options[:is_fts],
+     buildlog_path: "#{$root_dir}/artifacts/logs/gym",
+     xcargs: "-UseModernBuildSystem=YES",
+     export_options: {
+       method: "app-store",
+       teamID: options[:buildTeamID],
+       provisioningProfiles: options[:provisioning_profiles]
+     }
+   )
+end
+
+lane :assert_build_number do |options|
+  build_number = options[:build_number]
+  target = options[:target]
+  configuration = options[:configuration]
+
+  begin
+    market_ver = get_version_number(target: target, configuration: configuration)
+    # TeamCity Service Message to change the build label
+    UI.success "##teamcity[buildNumber '" + market_ver + " (" + build_number + ")']"
+  rescue StandardError=>e
+    raise "Error: build_number option required. \nExample cmdline: fastlane [lane] build_number:4321"
+  end
+end
+
+private_lane :build_dependencies_if_necessary do |options|
+  if File.exist?("#{$root_dir}/Podfile")
+    UI.success "Installing Pods"
+    cocoapods(
+      clean: true,
+      repo_update: true
+    )
+  else
+    UI.important "No Podfile found!"
+  end
+end
