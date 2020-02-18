@@ -11,6 +11,8 @@
 		</dict>
 		<key>DevOpsExample.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
@@ -47,12 +49,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>92BC2EC723FB0ACD00AF1AD6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>92BC2EDD23FB0ACE00AF1AD6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>92BC2EE823FB0ACE00AF1AD6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>92BC2F7723FB17EE00AF1AD6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>92BC2FB023FB262600AF1AD6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>92BC2FBF23FB262800AF1AD6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

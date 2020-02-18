@@ -108,6 +108,7 @@
 		92BC2FE423FB277C00AF1AD6 /* ExampleC-Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "ExampleC-Assets.xcassets"; sourceTree = "<group>"; };
 		92BC2FE623FB278400AF1AD6 /* ExampleC-Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "ExampleC-Main.storyboard"; sourceTree = "<group>"; };
 		92BC2FE823FB278A00AF1AD6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92BC300123FC519E00AF1AD6 /* Sourcery */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sourcery; sourceTree = "<group>"; };
 		93F072284F66263A301E68AE /* Pods-DevOpsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevOpsExample.debug.xcconfig"; path = "Target Support Files/Pods-DevOpsExample/Pods-DevOpsExample.debug.xcconfig"; sourceTree = "<group>"; };
 		AB217FC36CB3DBD67C7B7BB1 /* Pods_DevOpsExample_DevOpsExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevOpsExample_DevOpsExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6762AC6FA62268C3DDBE0A6 /* Pods-DevOpsExampleA.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevOpsExampleA.appstore.xcconfig"; path = "Target Support Files/Pods-DevOpsExampleA/Pods-DevOpsExampleA.appstore.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +194,7 @@
 				92BC2EC923FB0ACD00AF1AD6 /* Products */,
 				E9321D21E8B69D6ACE10FD7F /* Pods */,
 				240C3C1CA0A3D163190E96D6 /* Frameworks */,
+				92BC300123FC519E00AF1AD6 /* Sourcery */,
 			);
 			sourceTree = "<group>";
 		};
