@@ -4,6 +4,8 @@ trigger:
 jobs: 
 
 - job: iOS_Release
+pool:
+  vmImage: 'macOS 10.13'
   condition: succeeded()
   stategy:
   matrix:
