@@ -5,7 +5,7 @@ jobs:
 
 - job: iOS_Release
   pool:
-    vmImage: 'macOS 10.13'
+    vmImage: 'macOS-latest'
   condition: succeeded()
   strategy:
     matrix:
