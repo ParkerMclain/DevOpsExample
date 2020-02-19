@@ -7,7 +7,7 @@ jobs:
   pool:
     vmImage: 'macOS-latest'
   variables:
-    group: FTSKeys
+    - group: FTSKeys
   condition: succeeded()
   strategy:
     matrix:
