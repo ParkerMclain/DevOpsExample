@@ -257,27 +257,23 @@ lane :build do |options|
   scheme = options[:scheme]
   output_dir = "./artifacts/builds/appstore"
   build_dependencies_if_necessary(platform: "iOS")
-  unless File.file?(ipa_path)
-    gym(
-      workspace: $workspace,
-      clean: true,
-      scheme: scheme,
-      configuration: "Release",
-      output_directory: output_dir,
-      archive_path: output_dir,
-      buildlog_path: "#{$root_dir}/artifacts/logs/gym",
-      skip_profile_detection: options[:is_fts],
-      xcargs: "-UseModernBuildSystem=YES",
-      export_options: {
-        method: "ad-hoc",
-        iCloudContainerEnvironment: "Production",
-        teamID: options[:buildTeamID],
-        provisioningProfiles: options[:provisioning_profiles]
-      }
-    )
-  else
-    UI.important "Not Rebuilding IPA as it Already Exists at #{output_dir}"
-  end
+  gym(
+    workspace: $workspace,
+    clean: true,
+    scheme: scheme,
+    configuration: "Release",
+    output_directory: output_dir,
+    archive_path: output_dir,
+    buildlog_path: "#{$root_dir}/artifacts/logs/gym",
+    skip_profile_detection: options[:is_fts],
+    xcargs: "-UseModernBuildSystem=YES",
+    export_options: {
+      method: "ad-hoc",
+      iCloudContainerEnvironment: "Production",
+      teamID: options[:buildTeamID],
+      provisioningProfiles: options[:provisioning_profiles]
+    }
+  )
 end
 
 def baseipa_path(scheme)
