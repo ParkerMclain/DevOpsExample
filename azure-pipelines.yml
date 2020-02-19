@@ -20,6 +20,7 @@ jobs:
   steps:
     - script: gem install bundler
     - script: bundle install
-    - script: fastlane ios_appstore_no_upload app_name:$(app_name) build_number:2
+    # - script: fastlane ios_appstore_no_upload app_name:$(app_name) build_number:2
+    - script: fastlane build app_name:$(app_name) build_number:2
     - publish: $(System.DefaultWorkingDirectory)/artifacts/builds/appstore
       artifact: "$(app_name)"
