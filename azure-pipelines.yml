@@ -22,4 +22,4 @@ jobs:
     - script: bundle install
     - script: fastlane ios_appstore_no_upload app_name:$(app_name) build_number:2
     - publish: $(System.DefaultWorkingDirectory)/artifacts/builds/appstore
-      artifact: Artifact
+      artifact: "$(app_name)"
