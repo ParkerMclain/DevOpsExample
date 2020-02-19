@@ -18,8 +18,6 @@ jobs:
       # ExampleC:
       #   app_name: "ExampleC"
   steps:
-    #- script: gem install bundler
-    #- script: bundle install
-    - script: echo $DIST_P12_PASSWORD
-    #- script: export DIST_P12_PASSWORD="$(DIST_P12_PASSWORD)"
-    #- script: fastlane ios_appstore_no_upload app_name:$(app_name) build_number:2
+    - script: gem install bundler
+    - script: bundle install
+    - script: fastlane ios_appstore_no_upload app_name:$(app_name) build_number:2
