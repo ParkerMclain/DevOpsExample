@@ -6,6 +6,8 @@ jobs:
 - job: iOS_Release
   pool:
     vmImage: 'macOS-latest'
+  variables:
+    group: FTSKeys
   condition: succeeded()
   strategy:
     matrix:
