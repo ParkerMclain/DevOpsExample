@@ -255,7 +255,7 @@ end
 desc "Build the QA/Adhoc/Release configuration ipa."
 lane :build do |options|
   scheme = options[:scheme]
-  ipa_path = baseipa_path(scheme)
+  output_dir = "./artifacts/builds/appstore"
   build_dependencies_if_necessary(platform: "iOS")
   unless File.file?(ipa_path)
     gym(
@@ -263,7 +263,7 @@ lane :build do |options|
       clean: true,
       scheme: scheme,
       configuration: "Release",
-      output_directory: File.dirname(ipa_path),
+      output_directory: output_dir,
       archive_path: File.dirname(ipa_path),
       buildlog_path: "#{$root_dir}/artifacts/logs/gym",
       skip_profile_detection: options[:is_fts],
@@ -276,7 +276,7 @@ lane :build do |options|
       }
     )
   else
-    UI.important "Not Rebuilding IPA as it Already Exists at #{ipa_path}"
+    UI.important "Not Rebuilding IPA as it Already Exists at #{output_dir}"
   end
 end
 
