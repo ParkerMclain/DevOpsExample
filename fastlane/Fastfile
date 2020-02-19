@@ -264,7 +264,7 @@ lane :build do |options|
       scheme: scheme,
       configuration: "Release",
       output_directory: output_dir,
-      archive_path: File.dirname(ipa_path),
+      archive_path: output_dir,
       buildlog_path: "#{$root_dir}/artifacts/logs/gym",
       skip_profile_detection: options[:is_fts],
       xcargs: "-UseModernBuildSystem=YES",
