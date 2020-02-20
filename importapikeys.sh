@@ -13,5 +13,5 @@ source ./APIKeys/$filename
 fi
 
 #no `else` case needed if the CI works as expected
-$PODS_ROOT/Sourcery/bin/sourcery --templates ./Sourcery/Stencils --sources ./DevOpsExample --output ./Sourcery/Output --args key1=$API_KEY_1,key2=$API_KEY_2,key3=$API_KEY_3
+$PODS_ROOT/Sourcery/bin/sourcery --templates ./Sourcery/Stencils --sources ./DevOpsExample --output ./Sourcery/Output --args KEY1=$API_KEY_1,KEY2=$API_KEY_2,KEY3=$API_KEY_3
 
