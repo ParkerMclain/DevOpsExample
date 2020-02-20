@@ -1,12 +1,12 @@
 parameters:
   job_name: ''
   app_name: ''
-  pool: ''
   variables: ''
 
 jobs:
 - job: ${{ parameters.job_name }}
-  pool: ${{ parameters.pool }}
+  pool:
+    vmImage: 'macOS-latest'
   condition: succeeded()
   variables: 
     - group: ${{ parameters.variables }}
