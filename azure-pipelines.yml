@@ -1,33 +1,19 @@
 trigger:
   branches:
     include:
-      - azure-pipeline-yaml
+      - azure-pipeline-test-2
     exclude:
       - develop
 variables:
   - group: FTSKeys
-jobs: 
-- job: iOS_Release
-  pool:
-    vmImage: 'macOS-latest'
-  condition: succeeded()
-  strategy:
-    maxParallel: 16
-    matrix:
-      ExampleA:
-        app_name: "ExampleA"
-      ExampleB:
-        app_name: "ExampleB"
-      ExampleC:
-        app_name: "ExampleC"
-  variables:
-    - group: app_name
-  steps:
-    - script: gem install bundler
-    - script: bundle install
-    - script: echo $key1
-    - script: fastlane build app_name:$(app_name) build_number:2
-      env:
-          DIST_P12_PASSWORD: $(DIST_P12_PASSWORD)
-    - publish: $(System.DefaultWorkingDirectory)/artifacts/builds/appstore
-      artifact: "$(app_name)"
+
+
+jobs:
+- template: build.yml  # Template reference
+  parameters:
+    job_name: iOS_Release
+    pool:
+      vmImage: 'macOS-10.14'
+    variable_group_name:
+      group: ExampleA
+    app_name: ExampleA
