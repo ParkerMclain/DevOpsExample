@@ -4,8 +4,8 @@ trigger:
       - azure-pipeline-test-2
     exclude:
       - develop
-variables:
-  - group: FTSKeys
+# variables:
+#   - group: FTSKeys
 
 
 jobs:
