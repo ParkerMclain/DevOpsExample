@@ -4,9 +4,6 @@ trigger:
       - azure-pipeline-test-2
     exclude:
       - develop
-# variables:
-#   - group: FTSKeys
-
 
 jobs:
 - template: Templates/build-qa-ipa.yml
@@ -16,14 +13,16 @@ jobs:
     variables: 'ExampleAKeys'
     app_name: ExampleA
 
-# - template: Templates/build-qa-ipa.yml
-#   parameters:
-#     job_name: ExampleB_Release
-#     variables: 'ExampleBKeys'
-#     app_name: ExampleB
+- template: Templates/build-qa-ipa.yml
+  parameters:
+    ipa_job_name: ExampleB_Release
+    test_job_name: ExampleB_Tests
+    variables: 'ExampleBKeys'
+    app_name: ExampleB
 
-# - template: Templates/build-qa-ipa.yml
-#   parameters:
-#     job_name: ExampleC_Release
-#     variables: 'ExampleCKeys'
-#     app_name: ExampleC
+- template: Templates/build-qa-ipa.yml
+  parameters:
+    ipa_job_name: ExampleC_Release
+    test_job_name: ExampleC_Tests
+    variables: 'ExampleCKeys'
+    app_name: ExampleC
