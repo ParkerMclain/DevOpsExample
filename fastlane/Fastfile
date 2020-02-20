@@ -279,3 +279,28 @@ end
 def baseipa_path(scheme)
   "#{$root_dir}/artifacts/builds/base/#{scheme}.ipa"
 end
+
+desc "Build a QA app for deployment"
+desc "####Options"
+desc " * **`app_name`**: app to build."
+desc " * **`build_number`**: increment_build_number"
+desc "Example cmdline: fastlane ios_qa app_name:Fox29 build_number:4321"
+lane :ios_qa_no_test_or_upload do |options|
+
+  target = options[:target]
+  scheme = options[:scheme]
+  configuration = "Release"
+
+  assert_build_number(
+    build_number: options[:build_number],
+    target: target,
+    configuration: configuration,
+  )
+
+  increment_build_number(
+    build_number: options[:build_number],
+    xcodeproj: $project
+  )
+
+  build(options)
+end
