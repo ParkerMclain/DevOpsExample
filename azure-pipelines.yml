@@ -16,3 +16,19 @@ jobs:
       vmImage: 'macOS-10.14'
     variables: 'ExampleAKeys'
     app_name: ExampleA
+
+- template: build.yml  # Template reference
+  parameters:
+    job_name: iOS_Release
+    pool:
+      vmImage: 'macOS-10.14'
+    variables: 'ExampleBKeys'
+    app_name: ExampleB
+
+- template: build.yml  # Template reference
+  parameters:
+    job_name: iOS_Release
+    pool:
+      vmImage: 'macOS-10.14'
+    variables: 'ExampleCKeys'
+    app_name: ExampleC
