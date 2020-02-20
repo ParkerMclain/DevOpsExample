@@ -304,3 +304,33 @@ lane :ios_qa_no_test_or_upload do |options|
 
   build(options)
 end
+
+desc "Run all Unit Tests"
+desc "####Options"
+desc " * **`app_name`**: app to test."
+lane :test do |options|
+  output_directory = "./test_output"
+  build_dependencies_if_necessary(platform: "iOS")
+
+  sourcery(options)
+
+  # Build for testing to generate xctestrun
+  scan(
+    scheme: options[:scheme],
+    configuration: "Debug",
+    devices: ["iPhone 11"],
+    output_directory: output_directory,
+    derived_data_path: "./build/TestDD-iPhone",
+    disable_concurrent_testing: true,
+    max_concurrent_simulators: 1,
+    xcargs: "-UseModernBuildSystem=YES",
+    only_testing: options[:unit_test_bundle],
+  )
+end
+
+desc "Run Sourcery"
+desc "####Options"
+desc " * **`app_name`**: app to test."
+lane :sourcery do |options|
+  sh(%|export PODS_ROOT="#{$root_dir}/Pods"; cd "#{$root_dir}"; "#{$root_dir}/importapikeys.sh"|)
+end

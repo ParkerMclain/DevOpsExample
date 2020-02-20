@@ -71,6 +71,24 @@ Build a QA app for deployment
  * **`build_number`**: increment_build_number
 
 Example cmdline: fastlane ios_qa app_name:Fox29 build_number:4321
+### test
+```
+fastlane test
+```
+Run all Unit Tests
+
+####Options
+
+ * **`app_name`**: app to test.
+### sourcery
+```
+fastlane sourcery
+```
+Run Sourcery
+
+####Options
+
+ * **`app_name`**: app to test.
 
 ----
 
