@@ -7,17 +7,14 @@ jobs:
 - job: ${{ parameters.job_name }}
   pool:
     vmImage: 'macOS-latest'
-  condition: succeeded()
   variables: 
     - group: ${{ parameters.variables }}
     - group: FTSKeys
   steps:
     - script: gem install bundler
     - script: bundle install
-    - script: echo $DIST_P12_PASSWORD
       env:
             DIST_P12_PASSWORD: $(DIST_P12_PASSWORD)
-    - script: echo $KEY1
     - script: fastlane ios_qa_no_test_or_upload app_name:${{ parameters.app_name }} build_number:2
       env:
           DIST_P12_PASSWORD: $(DIST_P12_PASSWORD)
