@@ -17,6 +17,8 @@ jobs:
     matrix:
       ExampleA:
         app_name: "ExampleA"
+        variables:
+          - group: ExampleAKeys
       ExampleB:
         app_name: "ExampleB"
       ExampleC:
@@ -24,6 +26,7 @@ jobs:
   steps:
     - script: gem install bundler
     - script: bundle install
+    - script: echo $key1
     # - script: fastlane ios_appstore_no_upload app_name:$(app_name) build_number:2
     - script: fastlane build app_name:$(app_name) build_number:2
       env:
