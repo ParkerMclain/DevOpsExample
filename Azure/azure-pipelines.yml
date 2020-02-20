@@ -15,14 +15,20 @@ jobs:
     variables: 'ExampleAKeys'
     app_name: ExampleA
 
-- template: Templates/build-qa-ipa.yml
+- template: Templates/test-build.yml
   parameters:
-    job_name: ExampleB_Release
-    variables: 'ExampleBKeys'
-    app_name: ExampleB
+    job_name: ExampleA_UITest
+    variables: 'ExampleAKeys'
+    app_name: ExampleA
 
-- template: Templates/build-qa-ipa.yml
-  parameters:
-    job_name: ExampleC_Release
-    variables: 'ExampleCKeys'
-    app_name: ExampleC
+# - template: Templates/build-qa-ipa.yml
+#   parameters:
+#     job_name: ExampleB_Release
+#     variables: 'ExampleBKeys'
+#     app_name: ExampleB
+
+# - template: Templates/build-qa-ipa.yml
+#   parameters:
+#     job_name: ExampleC_Release
+#     variables: 'ExampleCKeys'
+#     app_name: ExampleC

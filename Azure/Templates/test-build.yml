@@ -1,0 +1,22 @@
+parameters:
+  job_name: ''
+  app_name: ''
+  variables: ''
+
+jobs:
+- job: ${{ parameters.job_name }}
+  pool:
+    vmImage: 'macOS-latest'
+  variables: 
+    - group: ${{ parameters.variables }}
+    - group: FTSKeys
+  steps:
+    - script: gem install bundler
+    - script: bundle install
+      env:
+            DIST_P12_PASSWORD: $(DIST_P12_PASSWORD)
+    - script: fastlane test app_name:${{ parameters.app_name }}
+      env:
+          DIST_P12_PASSWORD: $(DIST_P12_PASSWORD)
+    - publish: $(System.DefaultWorkingDirectory)/test_output
+      artifact: ${{ parameters.app_name }}
