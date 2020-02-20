@@ -5,12 +5,12 @@ parameters:
   variables: ''
 
 jobs:
-pool:
-  vmImage: 'macOS-latest'
-variables: 
-  - group: ${{ parameters.variables }}
-  - group: FTSKeys
 - job: ${{ parameters.test_job_name }}
+  pool:
+    vmImage: 'macOS-latest'
+  variables: 
+    - group: ${{ parameters.variables }}
+    - group: FTSKeys
   steps:
     - script: gem install bundler
     - script: bundle install
@@ -18,6 +18,11 @@ variables:
       env:
           DIST_P12_PASSWORD: $(DIST_P12_PASSWORD)
 - job: ${{ parameters.ipa_job_name }}
+  pool:
+    vmImage: 'macOS-latest'
+  variables: 
+    - group: ${{ parameters.variables }}
+    - group: FTSKeys
   dependsOn: ${{ parameters.test_job_name }}
   steps:
     - script: gem install bundler
