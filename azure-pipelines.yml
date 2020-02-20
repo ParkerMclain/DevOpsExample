@@ -4,9 +4,9 @@ trigger:
       - azure-pipeline-yaml
     exclude:
       - develop
-
+variables:
+  - group: FTSKeys
 jobs: 
-
 - job: iOS_Release
   pool:
     vmImage: 'macOS-latest'
@@ -21,7 +21,6 @@ jobs:
       ExampleC:
         app_name: "ExampleC"
   variables:
-    - group: FTSKeys
     - group: $(app_name)
   steps:
     - script: gem install bundler
