@@ -24,3 +24,5 @@ jobs:
     - script: fastlane build app_name:$(app_name) build_number:2
     - publish: $(System.DefaultWorkingDirectory)/artifacts/builds/appstore
       artifact: "$(app_name)"
+      env:
+        DIST_P12_PASSWORD: $(DIST_P12_PASSWORD)
