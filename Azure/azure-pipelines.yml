@@ -1,0 +1,28 @@
+trigger:
+  branches:
+    include:
+      - azure-pipeline-test-2
+    exclude:
+      - develop
+
+jobs:
+- template: Templates/build-qa-ipa.yml
+  parameters:
+    ipa_job_name: ExampleA_Release_Build
+    test_job_name: ExampleA_Tests
+    variables: 'ExampleAKeys'
+    app_name: ExampleA
+
+- template: Templates/build-qa-ipa.yml
+  parameters:
+    ipa_job_name: ExampleB_Release_Build
+    test_job_name: ExampleB_Tests
+    variables: 'ExampleBKeys'
+    app_name: ExampleB
+
+- template: Templates/build-qa-ipa.yml
+  parameters:
+    ipa_job_name: ExampleC_Release_Build
+    test_job_name: ExampleC_Tests
+    variables: 'ExampleCKeys'
+    app_name: ExampleC

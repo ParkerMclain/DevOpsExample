@@ -58,6 +58,37 @@ fastlane assert_build_number
 fastlane build
 ```
 Build the QA/Adhoc/Release configuration ipa.
+### ios_qa_no_test_or_upload
+```
+fastlane ios_qa_no_test_or_upload
+```
+Build a QA app for deployment
+
+####Options
+
+ * **`app_name`**: app to build.
+
+ * **`build_number`**: increment_build_number
+
+Example cmdline: fastlane ios_qa app_name:Fox29 build_number:4321
+### test
+```
+fastlane test
+```
+Run all Unit Tests
+
+####Options
+
+ * **`app_name`**: app to test.
+### sourcery
+```
+fastlane sourcery
+```
+Run Sourcery
+
+####Options
+
+ * **`app_name`**: app to test.
 
 ----
 

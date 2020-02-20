@@ -215,7 +215,7 @@ lane :ios_appstore_no_upload do |options|
      configuration: configuration,
      output_directory: output_dir,
      archive_path: output_dir,
-     skip_profile_detection: options[:is_fts],
+     skip_profile_detection: true,
      buildlog_path: "#{$root_dir}/artifacts/logs/gym",
      xcargs: "-UseModernBuildSystem=YES",
      export_options: {
@@ -255,31 +255,82 @@ end
 desc "Build the QA/Adhoc/Release configuration ipa."
 lane :build do |options|
   scheme = options[:scheme]
-  ipa_path = baseipa_path(scheme)
+  output_dir = "./artifacts/builds/appstore"
   build_dependencies_if_necessary(platform: "iOS")
-  unless File.file?(ipa_path)
-    gym(
-      workspace: $workspace,
-      clean: true,
-      scheme: scheme,
-      configuration: "Release",
-      output_directory: File.dirname(ipa_path),
-      archive_path: File.dirname(ipa_path),
-      buildlog_path: "#{$root_dir}/artifacts/logs/gym",
-      skip_profile_detection: options[:is_fts],
-      xcargs: "-UseModernBuildSystem=YES",
-      export_options: {
-        method: "ad-hoc",
-        iCloudContainerEnvironment: "Production",
-        teamID: options[:buildTeamID],
-        provisioningProfiles: options[:provisioning_profiles]
-      }
-    )
-  else
-    UI.important "Not Rebuilding IPA as it Already Exists at #{ipa_path}"
-  end
+  gym(
+    workspace: $workspace,
+    clean: true,
+    scheme: scheme,
+    configuration: "Release",
+    output_directory: output_dir,
+    archive_path: output_dir,
+    buildlog_path: "#{$root_dir}/artifacts/logs/gym",
+    skip_profile_detection: true,
+    xcargs: "-UseModernBuildSystem=YES",
+    export_options: {
+      method: "ad-hoc",
+      iCloudContainerEnvironment: "Production",
+      teamID: options[:buildTeamID],
+      provisioningProfiles: options[:provisioning_profiles]
+    }
+  )
 end
 
 def baseipa_path(scheme)
   "#{$root_dir}/artifacts/builds/base/#{scheme}.ipa"
+end
+
+desc "Build a QA app for deployment"
+desc "####Options"
+desc " * **`app_name`**: app to build."
+desc " * **`build_number`**: increment_build_number"
+desc "Example cmdline: fastlane ios_qa app_name:Fox29 build_number:4321"
+lane :ios_qa_no_test_or_upload do |options|
+
+  target = options[:target]
+  scheme = options[:scheme]
+  configuration = "Release"
+
+  assert_build_number(
+    build_number: options[:build_number],
+    target: target,
+    configuration: configuration,
+  )
+
+  increment_build_number(
+    build_number: options[:build_number],
+    xcodeproj: $project
+  )
+
+  build(options)
+end
+
+desc "Run all Unit Tests"
+desc "####Options"
+desc " * **`app_name`**: app to test."
+lane :test do |options|
+  output_directory = "./test_output"
+  build_dependencies_if_necessary(platform: "iOS")
+
+  sourcery(options)
+
+  # Build for testing to generate xctestrun
+  scan(
+    scheme: options[:scheme],
+    configuration: "Debug",
+    devices: ["iPhone 11"],
+    output_directory: output_directory,
+    derived_data_path: "./build/TestDD-iPhone",
+    disable_concurrent_testing: true,
+    max_concurrent_simulators: 1,
+    xcargs: "-UseModernBuildSystem=YES",
+    only_testing: options[:unit_test_bundle],
+  )
+end
+
+desc "Run Sourcery"
+desc "####Options"
+desc " * **`app_name`**: app to test."
+lane :sourcery do |options|
+  sh(%|export PODS_ROOT="#{$root_dir}/Pods"; cd "#{$root_dir}"; "#{$root_dir}/importapikeys.sh"|)
 end

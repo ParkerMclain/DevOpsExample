@@ -1,13 +1,13 @@
 public struct APIKeys {
     static var key1: String {
-        return "{{ argument.key1 }}"
+        return "{{ argument.KEY1 }}"
     }
 
     static var key2: String {
-        return "{{ argument.key2 }}"
+        return "{{ argument.KEY2 }}"
     }
 
     static var key3: String {
-        return "{{ argument.key3 }}"
+        return "{{ argument.KEY3 }}"
     }
 }
