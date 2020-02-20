@@ -9,19 +9,19 @@ trigger:
 
 
 jobs:
-- template: build-ipa.yml  # Template reference
+- template: Azure/Templates/build.yml
   parameters:
     job_name: ExampleA_Release
     variables: 'ExampleAKeys'
     app_name: ExampleA
 
-- template: build-ipa.yml  # Template reference
+- template: Azure/Templates/build.yml
   parameters:
     job_name: ExampleB_Release
     variables: 'ExampleBKeys'
     app_name: ExampleB
 
-- template: build-ipa.yml  # Template reference
+- template: Azure/Templates/build.yml
   parameters:
     job_name: ExampleC_Release
     variables: 'ExampleCKeys'
