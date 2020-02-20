@@ -15,5 +15,5 @@ jobs:
     pool:
       vmImage: 'macOS-10.14'
     variable_group_name:
-      group: 'ExampleA4'
+      group: ExampleA4
     app_name: ExampleA
