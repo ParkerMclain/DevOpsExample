@@ -14,5 +14,5 @@ jobs:
     job_name: iOS_Release
     pool:
       vmImage: 'macOS-10.14'
-    variables: ExampleAKeys
+    variables: 'ExampleAKeys'
     app_name: ExampleA
