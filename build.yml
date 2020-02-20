@@ -12,14 +12,14 @@ jobs:
     - group: ${{ parameters.variables }}
     - group: FTSKeys
   steps:
-    - script: gem install bundler
-    - script: bundle install
+    # - script: gem install bundler
+    # - script: bundle install
     - script: echo $DIST_P12_PASSWORD
       env:
             DIST_P12_PASSWORD: $(DIST_P12_PASSWORD)
     - script: echo $key1
-    - script: fastlane build app_name:${{ parameters.app_name }} build_number:2
-      env:
-          DIST_P12_PASSWORD: $(DIST_P12_PASSWORD)
-    - publish: $(System.DefaultWorkingDirectory)/artifacts/builds/appstore
-      artifact: ${{ parameters.app_name }}
+    # - script: fastlane build app_name:${{ parameters.app_name }} build_number:2
+    #   env:
+    #       DIST_P12_PASSWORD: $(DIST_P12_PASSWORD)
+    # - publish: $(System.DefaultWorkingDirectory)/artifacts/builds/appstore
+    #   artifact: ${{ parameters.app_name }}
