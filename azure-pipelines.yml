@@ -19,7 +19,7 @@ jobs:
       ExampleA:
         app_name: "ExampleA"
         variables: 
-          group: ExampleAKeys
+          - group: ExampleAKeys
       ExampleB:
         app_name: "ExampleB"
       ExampleC:
