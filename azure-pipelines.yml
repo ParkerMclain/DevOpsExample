@@ -16,14 +16,13 @@ jobs:
     matrix:
       ExampleA:
         app_name: "ExampleA"
-        variables:
-          - group: ExampleA
       ExampleB:
         app_name: "ExampleB"
       ExampleC:
         app_name: "ExampleC"
   variables:
     - group: FTSKeys
+    - group: $app_name
   steps:
     - script: gem install bundler
     - script: bundle install
