@@ -1769,7 +1769,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HNM8PG7H4;
-				INFOPLIST_FILE = "DevOpsExampleTests copy 2-Info.plist";
+				INFOPLIST_FILE = "DevOpsExampleB/ExampleB Tests/info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1791,7 +1791,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HNM8PG7H4;
-				INFOPLIST_FILE = "DevOpsExampleTests copy 2-Info.plist";
+				INFOPLIST_FILE = "DevOpsExampleB/ExampleB Tests/info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1813,7 +1813,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HNM8PG7H4;
-				INFOPLIST_FILE = "DevOpsExampleTests copy 2-Info.plist";
+				INFOPLIST_FILE = "DevOpsExampleB/ExampleB Tests/info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1835,7 +1835,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HNM8PG7H4;
-				INFOPLIST_FILE = "DevOpsExampleTests copy 3-Info.plist";
+				INFOPLIST_FILE = "DevOpsExampleC/ExampleC Tests/info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1857,7 +1857,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HNM8PG7H4;
-				INFOPLIST_FILE = "DevOpsExampleTests copy 3-Info.plist";
+				INFOPLIST_FILE = "DevOpsExampleC/ExampleC Tests/info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1879,7 +1879,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HNM8PG7H4;
-				INFOPLIST_FILE = "DevOpsExampleTests copy 3-Info.plist";
+				INFOPLIST_FILE = "DevOpsExampleC/ExampleC Tests/info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
