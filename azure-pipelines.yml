@@ -10,20 +10,18 @@ jobs:
 - job: iOS_Release
   pool:
     vmImage: 'macOS-latest'
-  variables:
-    - group: FTSKeys
   condition: succeeded()
   strategy:
     maxParallel: 16
     matrix:
       ExampleA:
         app_name: "ExampleA"
-        variables: 
-          - group: ExampleAKeys
       ExampleB:
         app_name: "ExampleB"
       ExampleC:
         app_name: "ExampleC"
+  variables:
+    - group: $(app_name)
   steps:
     - script: gem install bundler
     - script: bundle install
