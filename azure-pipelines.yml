@@ -11,7 +11,7 @@ trigger:
 jobs:
 - template: build.yml  # Template reference
   parameters:
-    job_name: iOS_Release
+    job_name: ExampleA_Release
     pool:
       vmImage: 'macOS-10.14'
     variables: 'ExampleAKeys'
@@ -19,7 +19,7 @@ jobs:
 
 - template: build.yml  # Template reference
   parameters:
-    job_name: iOS_Release
+    job_name: ExampleB_Release
     pool:
       vmImage: 'macOS-10.14'
     variables: 'ExampleBKeys'
@@ -27,7 +27,7 @@ jobs:
 
 - template: build.yml  # Template reference
   parameters:
-    job_name: iOS_Release
+    job_name: ExampleC_Release
     pool:
       vmImage: 'macOS-10.14'
     variables: 'ExampleCKeys'
