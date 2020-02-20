@@ -25,19 +25,5 @@ class ExampleBMainViewController: UIViewController {
         }
         
         key1Label.text = "Key1: \(APIKeys.key1)"
-        configurationLabel.text = configuration
     }
-    
-    let configuration : String = {
-        #if DEBUG
-            return "DEBUG"
-        #elseif RELEASE
-            return "RELEASE"
-        #elseif APPSTORE
-            return "APPSTORE"
-        #else
-            return "Unknown"
-        #endif
-    }()
-
 }
