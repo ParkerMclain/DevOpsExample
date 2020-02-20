@@ -1,5 +1,9 @@
 trigger:
-  - azure-pipeline-yaml
+  branches:
+    include:
+      - azure-pipeline-yaml
+    exclude:
+      - develop
 
 jobs: 
 
@@ -22,7 +26,7 @@ jobs:
     - script: bundle install
     # - script: fastlane ios_appstore_no_upload app_name:$(app_name) build_number:2
     - script: fastlane build app_name:$(app_name) build_number:2
+      env:
+          DIST_P12_PASSWORD: $(DIST_P12_PASSWORD)
     - publish: $(System.DefaultWorkingDirectory)/artifacts/builds/appstore
       artifact: "$(app_name)"
-      env:
-        DIST_P12_PASSWORD: $(DIST_P12_PASSWORD)
