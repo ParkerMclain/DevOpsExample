@@ -23,7 +23,6 @@ class ExampleBMainViewController: UIViewController {
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
            versionNumberLabel.text = "Version: \(version)"
         }
-        
         key1Label.text = "Key1: \(APIKeys.key1)"
     }
 }
