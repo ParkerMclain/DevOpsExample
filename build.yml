@@ -8,12 +8,12 @@ jobs:
 - job: ${{ parameters.job_name }}
   pool: ${{ parameters.pool }}
   condition: succeeded()
-  variables: ${{ parameters.variables }}
+  variables: 
+    - group: ${{ parameters.variables }}
   steps:
     - script: gem install bundler
     - script: bundle install
     - script: echo $key1
-    - script: echo ${{ parameters.variables }}
     - script: fastlane build app_name:${{ parameters.app_name }} build_number:2
       env:
           DIST_P12_PASSWORD: $(DIST_P12_PASSWORD)
