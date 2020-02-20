@@ -13,8 +13,11 @@ jobs:
   steps:
     - script: gem install bundler
     - script: bundle install
+    - script: fastlane test app_name:${{ parameters.app_name }}
       env:
-            DIST_P12_PASSWORD: $(DIST_P12_PASSWORD)
+          DIST_P12_PASSWORD: $(DIST_P12_PASSWORD)
+    - publish: $(System.DefaultWorkingDirectory)/test_output
+      artifact: ${{ parameters.app_name }}
     - script: fastlane ios_qa_no_test_or_upload app_name:${{ parameters.app_name }} build_number:$(Build.BuildNumber)
       env:
           DIST_P12_PASSWORD: $(DIST_P12_PASSWORD)
