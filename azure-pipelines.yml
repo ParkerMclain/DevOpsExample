@@ -14,11 +14,12 @@ jobs:
     - group: FTSKeys
   condition: succeeded()
   strategy:
+    maxParallel: 16
     matrix:
       ExampleA:
         app_name: "ExampleA"
-        variables:
-          - group: ExampleAKeys
+        variables: 
+          group: ExampleAKeys
       ExampleB:
         app_name: "ExampleB"
       ExampleC:
