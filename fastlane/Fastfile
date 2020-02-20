@@ -215,7 +215,7 @@ lane :ios_appstore_no_upload do |options|
      configuration: configuration,
      output_directory: output_dir,
      archive_path: output_dir,
-     skip_profile_detection: options[:is_fts],
+     skip_profile_detection: true,
      buildlog_path: "#{$root_dir}/artifacts/logs/gym",
      xcargs: "-UseModernBuildSystem=YES",
      export_options: {
@@ -265,7 +265,7 @@ lane :build do |options|
     output_directory: output_dir,
     archive_path: output_dir,
     buildlog_path: "#{$root_dir}/artifacts/logs/gym",
-    skip_profile_detection: options[:is_fts],
+    skip_profile_detection: true,
     xcargs: "-UseModernBuildSystem=YES",
     export_options: {
       method: "ad-hoc",
