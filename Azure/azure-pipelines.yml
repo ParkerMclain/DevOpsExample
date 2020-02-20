@@ -11,7 +11,8 @@ trigger:
 jobs:
 - template: Templates/build-qa-ipa.yml
   parameters:
-    job_name: ExampleA_Release
+    ipa_job_name: ExampleA_Release
+    test_job_name: ExampleA_Tests
     variables: 'ExampleAKeys'
     app_name: ExampleA
 

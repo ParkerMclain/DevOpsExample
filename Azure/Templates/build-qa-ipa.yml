@@ -1,21 +1,27 @@
 parameters:
-  job_name: ''
+  ipa_job_name: ''
+  test_job_name: ''
   app_name: ''
   variables: ''
 
 jobs:
-- job: ${{ parameters.job_name }}
-  pool:
-    vmImage: 'macOS-latest'
-  variables: 
-    - group: ${{ parameters.variables }}
-    - group: FTSKeys
+pool:
+  vmImage: 'macOS-latest'
+variables: 
+  - group: ${{ parameters.variables }}
+  - group: FTSKeys
+- job: ${{ parameters.test_job_name }}
   steps:
     - script: gem install bundler
     - script: bundle install
     - script: fastlane test app_name:${{ parameters.app_name }}
       env:
           DIST_P12_PASSWORD: $(DIST_P12_PASSWORD)
+- job: ${{ parameters.ipa_job_name }}
+  dependsOn: ${{ parameters.test_job_name }}
+  steps:
+    - script: gem install bundler
+    - script: bundle install
     - script: fastlane ios_qa_no_test_or_upload app_name:${{ parameters.app_name }} build_number:$(Build.BuildNumber)
       env:
           DIST_P12_PASSWORD: $(DIST_P12_PASSWORD)
