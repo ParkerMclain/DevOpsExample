@@ -21,7 +21,7 @@ jobs:
       ExampleC:
         app_name: "ExampleC"
   variables:
-    - group: $(app_name)
+    - group: app_name
   steps:
     - script: gem install bundler
     - script: bundle install
