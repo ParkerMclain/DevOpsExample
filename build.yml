@@ -2,13 +2,13 @@ parameters:
   job_name: ''
   app_name: ''
   pool: ''
-  variable_group_name: ''
+  variables: ''
 
 jobs:
 - job: ${{ parameters.job_name }}
   pool: ${{ parameters.pool }}
   condition: succeeded()
-  variables: ${{ parameters.variable_group_name }}
+  variables: ${{ parameters.variables }}
   steps:
     - script: gem install bundler
     - script: bundle install
