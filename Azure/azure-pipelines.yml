@@ -9,19 +9,19 @@ trigger:
 
 
 jobs:
-- template: Templates/build-ipa.yml
+- template: Templates/build-qa-ipa.yml
   parameters:
     job_name: ExampleA_Release
     variables: 'ExampleAKeys'
     app_name: ExampleA
 
-- template: Templates/build-ipa.yml
+- template: Templates/build-qa-ipa.yml
   parameters:
     job_name: ExampleB_Release
     variables: 'ExampleBKeys'
     app_name: ExampleB
 
-- template: Templates/build-ipa.yml
+- template: Templates/build-qa-ipa.yml
   parameters:
     job_name: ExampleC_Release
     variables: 'ExampleCKeys'
